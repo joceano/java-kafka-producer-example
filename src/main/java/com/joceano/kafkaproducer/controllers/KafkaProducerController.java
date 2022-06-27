@@ -1,5 +1,6 @@
 package com.joceano.kafkaproducer.controllers;
 
+import com.joceano.kafkaproducer.models.Pedido;
 import com.joceano.kafkaproducer.services.KafkaProducerService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,11 @@ public class KafkaProducerController {
 
     @GetMapping(value = "/send")
     public void send(){
-        kafkaProducerService.send("Mensagem de teste enviada ao tópico");
+
+        var pedido = new Pedido();
+        pedido.setId(1L);
+        pedido.setDescricao("Pedido número 1");
+
+        kafkaProducerService.send(pedido);
     }
 }

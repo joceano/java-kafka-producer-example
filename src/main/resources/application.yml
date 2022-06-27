@@ -6,8 +6,15 @@ spring:
     producer:
       bootstrap-servers: 127.0.0.1:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       group-id: group_id
+      properties:
+        acks: 1
+        spring:
+          json:
+            add:
+              type:
+                headers: false
 
 topic:
   name:
