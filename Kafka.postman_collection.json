@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "82ae2485-4e42-4a70-aed5-96b1082a9aa5",
+		"name": "Kafka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/kafka/send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"descricao\": \"Pedido 1\",\r\n    \"valor\": 1.29,\r\n    \"status\": \"PENDENTE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/kafka/send",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"kafka",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
