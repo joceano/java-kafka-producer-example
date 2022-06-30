@@ -6,13 +6,13 @@
 	},
 	"item": [
 		{
-			"name": "localhost:8081/kafka/send",
+			"name": "Exemplo pedido Kafka",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 1,\r\n    \"descricao\": \"Pedido 1\",\r\n    \"valor\": 1.29,\r\n    \"status\": \"PENDENTE\"\r\n}",
+					"raw": "{\r\n   \"id\":1,\r\n   \"descricao\":\"Pedido 1\",\r\n   \"valor\":1.30,\r\n   \"status\":\"PENDENTE\",\r\n   \"itens\":[\r\n      {\r\n         \"id\":1,\r\n         \"descricao\":\"Item 1\"\r\n      },\r\n      {\r\n         \"id\":2,\r\n         \"descricao\":\"Item 2\"\r\n      }\r\n   ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
