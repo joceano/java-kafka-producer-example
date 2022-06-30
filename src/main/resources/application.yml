@@ -1,26 +1,7 @@
 server:
   port: 8081
 
-spring:
-  kafka:
-    producer:
-      bootstrap-servers: 127.0.0.1:9092
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      group-id: group_id
-      properties:
-        acks: 1
-        spring:
-          json:
-            add:
-              type:
-                headers: false
-
-topic:
-  name:
-    producer: topic.test
-
-auto:
-  create:
-    topics:
-      enable: true
+kafka:
+  topic: 'topic.test'
+  group-id: 'group_id'
+  server-config: 'localhost:9092'
